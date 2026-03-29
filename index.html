@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2363729687464860');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2363729687464860&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>霸王養精蓄力丹 | 為男人精氣神一生懸命</title>
+    
+    <style>
+        body { font-family: "PingFang TC", "Microsoft JhengHei", sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; line-height: 1.5; }
+        .container { max-width: 640px; margin: 0 auto; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+
+        /* 圖片全局樣式 */
+        img { width: 100%; display: block; height: auto; margin: 0; padding: 0; }
+
+        /* 標題區樣式 */
+        .tw-title-box { padding: 25px 18px; background: #fff; text-align: center; border-bottom: 3px solid #8B0000; }
+        .tw-title-box h1 { font-size: 24px; color: #1a1a1a; margin: 0; line-height: 1.4; font-weight: 900; }
+
+        /* --- 仿圖片效果：高端電商價格區塊 --- */
+        .promo-block { 
+            background: #fff; 
+            margin: 10px; 
+            padding: 15px; 
+            border-radius: 10px; 
+            border: 1px solid #eee;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .promo-left { flex: 1; }
+        .price-label { font-size: 14px; color: #666; margin-bottom: 2px; }
+        .current-price { color: #d32f2f; font-size: 32px; font-weight: 900; }
+        .old-price { color: #999; text-decoration: line-through; font-size: 16px; margin-left: 8px; }
+        
+        .promo-right { text-align: center; padding-left: 15px; border-left: 1px solid #eee; }
+        .stock-tag { font-size: 12px; color: #ff4d4d; font-weight: bold; margin-bottom: 5px; }
+        
+        /* 立即下單按鈕 - 已加入跳動模式 */
+        .jump-btn { 
+            display: inline-block; background: #d32f2f; color: #fff; 
+            text-decoration: none; border-radius: 5px; font-weight: bold; 
+            padding: 10px 20px; font-size: 16px; box-shadow: 0 4px 8px rgba(211,47,47,0.3);
+            animation: pulse 1.5s infinite; 
+        }
+
+        /* 訂單表單區塊 */
+        .order-area { background: #1a1a1a; color: #fff; padding: 35px 20px; border-top: 5px solid #fbc02d; }
+        .order-title { text-align: center; color: #fbc02d; margin-bottom: 10px; font-size: 24px; font-weight: bold; }
+        
+        /* 表單上方價格標註 */
+        .order-price-info { 
+            text-align: center; background: rgba(255,255,255,0.1); 
+            padding: 10px; border-radius: 5px; margin-bottom: 25px; border: 1px dashed #fbc02d;
+        }
+        .order-price-info span { color: #fbc02d; font-size: 20px; font-weight: bold; }
+
+        .input-group { margin-bottom: 20px; }
+        .input-group label { display: block; margin-bottom: 10px; color: #ddd; font-weight: bold; font-size: 16px; }
+        .input-group input { width: 100%; height: 55px; border-radius: 8px; border: none; padding-left: 15px; font-size: 18px; box-sizing: border-box; }
+        
+        /* 電話容器支持選單 */
+        .phone-container { display: flex; background: #fff; border-radius: 8px; overflow: hidden; }
+        .phone-prefix-select { 
+            background: #eee; color: #333; padding: 0 10px; font-weight: bold; 
+            border: none; border-right: 1px solid #ccc; font-size: 16px; outline: none; cursor: pointer;
+        }
+        .phone-container input { flex: 1; border: none; }
+
+        /* 確認訂購按鈕 */
+        .submit-btn { 
+            width: 100%; height: 70px; background: linear-gradient(180deg, #ff7043, #d32f2f); color: white; border: none; 
+            border-radius: 8px; font-size: 24px; font-weight: bold; cursor: pointer;
+            animation: pulse 1.5s infinite; margin-top: 10px;
+        }
+
+        /* 動畫定義 */
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.03); } 100% { transform: scale(1); } }
+
+        /* 懸浮立即購買按鈕 - 已加入跳動模式 */
+        #floating-btn { 
+            position: fixed; bottom: 20px; right: 20px; background: #d32f2f; color: white; 
+            padding: 14px 28px; border-radius: 50px; text-decoration: none; font-weight: bold; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 999; font-size: 18px;
+            animation: pulse 1.5s infinite;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="首圖.jpg" alt="產品首圖">
+
+    <div class="tw-title-box">
+        <h1>為男人精氣神一生懸命！<br>霸王養精蓄力丹傳承古法煉製90日 只為做好一顆真正的漢方精華</h1>
+    </div>
+
+    <div class="promo-block">
+        <div class="promo-left">
+            <div class="price-label">官方授權正品 (1瓶裝)</div>
+            <div>
+                <span class="current-price">1398 TWD</span>
+                <span class="old-price">2778 TWD</span>
+            </div>
+            <div style="font-size: 12px; color: #d32f2f; margin-top: 5px;">⚡ 今日下單 · 預計 2-3 天送達</div>
+        </div>
+        <div class="promo-right">
+            <div class="stock-tag">僅剩最後 7 組</div>
+<a href="#order-form" class="jump-btn" onclick="fbq('track', 'AddToCart');">立即下單</a>
+        </div>
+    </div>
+
+    <img src="1.webp">
+    <img src="2.webp">
+    <img src="3.png">
+    <img src="4.jpg">
+    <img src="5.jpg">
+    <img src="6.jpg">
+    <img src="7.png">
+    <img src="8.webp">
+    <img src="9.webp">
+    <img src="10.webp">
+    <img src="11.webp">
+    <img src="12.png">
+    <img src="13.jpg">
+    <img src="14.gif">
+    <img src="15.png">
+
+    <div class="order-area" id="order-form">
+        <div class="order-title">—— 貨到付款 · 隱私發貨 ——</div>
+        
+        <div class="order-price-info">
+            當前方案：漢方精粹1瓶裝<br>
+            結帳金額：<span>1398 TWD</span> (免運費)
+        </div>
+
+        <form id="orderForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe-sv68p-RF9rzBHcrAAPkjUJXxqdOEms7LxG-7kFTvvBoOQg/formResponse" method="POST" target="hidden_iframe">
+            
+            <div class="input-group">
+                <label>收貨人姓名：</label>
+                <input type="text" id="custName" name="entry.258352919" placeholder="請填寫您的真實姓名" required>
+            </div>
+
+            <div class="input-group">
+                <label>聯繫電話：</label>
+                <div class="phone-container">
+                    <select id="phonePrefix" class="phone-prefix-select">
+                        <option value="+886">+886</option>
+                        <option value="09">09</option>
+                    </select>
+                    <input type="tel" id="userPhone" placeholder="請輸入手機號碼" pattern="[0-9]*" required oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+                </div>
+                <input type="hidden" id="fullPhone" name="entry.704955727">
+                <input type="hidden" id="userIP" name="entry.770254355">
+            </div>
+
+            <div style="margin-bottom: 25px; font-size: 14px; color: #bbb; text-align: center; line-height: 1.6;">
+                🔒 隱私保護：包裹面單不顯示產品名稱<br>
+                ✅ 提交後客服將與您致電核對地址，請留意電話
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">立即確認訂購</button>
+        </form>
+    </div>
+
+    <div style="padding: 30px 15px; text-align: center; color: #888; font-size: 12px; background: #f4f4f4; line-height: 1.8;">
+        永信藥品國際藥廠出品 · 霸王丹台灣官方唯一通路<br>
+        桃市中藥廣字第1091200001號 | 衛署成製字第005101號<br>
+        本產品為漢方營養補充，效果因人而異
+    </div>
+</div>
+
+<a href="#order-form" id="floating-btn" onclick="fbq('track', 'AddToCart');">立即購買</a>
+
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="handleIframeLoad()"></iframe>
+
+<script>
+    // 獲取用戶 IP
+    fetch('https://api.ipify.org?format=json').then(res => res.json()).then(data => { document.getElementById('userIP').value = data.ip; });
+
+    var isSubmitting = false;
+    window.handleIframeLoad = function() {
+        if (isSubmitting) {
+            fbq('track', 'Purchase', {value: 1398, currency: 'TWD'});
+            alert('訂單提交成功！客服專員稍後將與您電話聯繫確認地址，請保持手機暢通！');
+            isSubmitting = false; 
+            location.reload();
+        }
+    };
+
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+        const prefix = document.getElementById('phonePrefix').value;
+        const phoneInput = document.getElementById('userPhone').value;
+        // 合併前綴與電話號碼提交到隱藏域
+        document.getElementById('fullPhone').value = prefix + phoneInput.trim();
+        isSubmitting = true;
+        document.getElementById('submitBtn').innerText = "訂單提交中...";
+        document.getElementById('submitBtn').disabled = true;
+    });
+</script>
+
+</body>
+</html>
