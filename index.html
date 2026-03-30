@@ -28,6 +28,35 @@ src="https://www.facebook.com/tr?id=2363729687464860&ev=PageView&noscript=1"
     <style>
         body { font-family: "PingFang TC", "Microsoft JhengHei", sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; line-height: 1.5; }
         .container { max-width: 640px; margin: 0 auto; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+      /* 虛假訂購信息彈窗樣式 */
+        #order-news {
+            position: fixed;
+            top: 20px;
+            left: 10px;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 13px;
+            display: none; /* 初始隱藏 */
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            animation: fadeInOut 5s infinite;
+        }
+        #order-news img {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            margin-right: 10px;
+            display: inline-block;
+        }
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translateY(-20px); }
+            10% { opacity: 1; transform: translateY(0); }
+            90% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-20px); }
+        }
 
         /* 圖片全局樣式 */
         img { width: 100%; display: block; height: auto; margin: 0; padding: 0; }
@@ -107,6 +136,10 @@ src="https://www.facebook.com/tr?id=2363729687464860&ev=PageView&noscript=1"
     </style>
 </head>
 <body>
+  <div id="order-news">
+    <img src="https://www.freeiconspng.com/uploads/success-icon-10.png" alt="">
+    <span id="order-text"></span>
+</div>
 
 <div class="container">
     <img src="首圖.jpg" alt="產品首圖">
@@ -196,6 +229,36 @@ src="https://www.facebook.com/tr?id=2363729687464860&ev=PageView&noscript=1"
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="handleIframeLoad()"></iframe>
 
 <script>
+  // --- 虛假訂購信息邏輯 ---
+    const names = ['王*德', '李*榮', '陳*廷', '張*豪', '林*宏', '吳*成', '蔡*志', '黃*文', '許*睿', '郭*賢'];
+    const cities = ['台北市', '新北市', '桃園市', '台中市', '台南市', '高雄市', '新竹縣', '彰化縣', '屏東縣', '宜蘭縣'];
+    const products = ['1瓶裝', '2瓶裝', '3瓶裝'];
+
+    function showOrderNews() {
+        const orderNews = document.getElementById('order-news');
+        const orderText = document.getElementById('order-text');
+        
+        // 隨機生成信息
+        const name = names[Math.floor(Math.random() * names.length)];
+        const city = cities[Math.floor(Math.random() * cities.length)];
+        const product = products[Math.floor(Math.random() * products.length)];
+        const time = Math.floor(Math.random() * 10) + 1; // 1-10分鐘前
+
+        orderText.innerText = `${time}分鐘前，${city}的${name}已訂購 ${product}`;
+        
+        // 顯示
+        orderNews.style.display = 'flex';
+        
+        // 5秒後隱藏，然後等待10秒再顯示下一個
+        setTimeout(() => {
+            orderNews.style.display = 'none';
+        }, 5000);
+    }
+
+    // 每15秒運行一次循環
+    setInterval(showOrderNews, 15000);
+    // 頁面加載完成3秒後顯示第一個
+    setTimeout(showOrderNews, 3000);
     // 獲取用戶 IP
     fetch('https://api.ipify.org?format=json').then(res => res.json()).then(data => { document.getElementById('userIP').value = data.ip; });
 
