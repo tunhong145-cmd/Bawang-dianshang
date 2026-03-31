@@ -61,6 +61,9 @@ src="https://www.facebook.com/tr?id=2363729687464860&ev=PageView&noscript=1"
         /* 標題區樣式 */
         .tw-title-box { padding: 25px 18px; background: #fff; text-align: center; border-bottom: 3px solid #8B0000; }
         .tw-title-box h1 { font-size: 24px; color: #1a1a1a; margin: 0; line-height: 1.4; font-weight: 900; }
+        /* 信任標誌樣式 */
+        .badge-box { display: flex; justify-content: center; gap: 8px; margin-top: 15px; }
+        .badge-item { font-size: 11px; background: #f8f8f8; color: #666; padding: 3px 8px; border-radius: 4px; border: 1px solid #eee; }
 
         /* --- 仿圖片效果：高端電商價格區塊 --- */
         .promo-block { 
@@ -81,6 +84,7 @@ src="https://www.facebook.com/tr?id=2363729687464860&ev=PageView&noscript=1"
         
         .promo-right { text-align: center; padding-left: 15px; border-left: 1px solid #eee; }
         .stock-tag { font-size: 12px; color: #ff4d4d; font-weight: bold; margin-bottom: 5px; }
+        .timer-text { font-size: 11px; color: #888; margin-top: 5px; }
         
         /* 立即下單按鈕 - 已加入跳動模式 */
         .jump-btn { 
@@ -149,7 +153,12 @@ src="https://www.facebook.com/tr?id=2363729687464860&ev=PageView&noscript=1"
     <img src="首圖.jpg" alt="產品首圖">
 
     <div class="tw-title-box">
-        <h1>為男人精氣神一生懸命！<br>霸王養精蓄力丹傳承古法煉製90日 只為做好一顆真正的漢方精華</h1>
+        <h1>【找回硬實力】霸王養精蓄力丹<br><span style="font-size: 18px; color: #d32f2f;">傳承古法漢方精粹，重拾男人巔峰自信！</span></h1>
+        <div class="badge-box">
+            <span class="badge-item">🛡️ SGS檢驗合格</span>
+            <span class="badge-item">🌿 100%漢方無西藥</span>
+            <span class="badge-item">🏭 官方正品保證</span>
+        </div>
     </div>
 
     <div class="promo-block">
@@ -159,11 +168,12 @@ src="https://www.facebook.com/tr?id=2363729687464860&ev=PageView&noscript=1"
                 <span class="current-price">1398 TWD</span>
                 <span class="old-price">2778 TWD</span>
             </div>
-            <div style="font-size: 12px; color: #d32f2f; margin-top: 5px;">⚡ 今日下單 · 預計 2-3 天送達</div>
+            <div style="font-size: 12px; color: #d32f2f; margin-top: 5px;">⚠️ ※ 每人限購 3 瓶，名額有限</div>
         </div>
         <div class="promo-right">
-            <div class="stock-tag">僅剩最後 7 組</div>
-<a href="#order-form" class="jump-btn" onclick="fbq('track', 'AddToCart');">搶先登記優惠</a>
+            <div class="stock-tag">僅剩最後 <span id="stock-count">7</span> 組</div>
+            <a href="#order-form" class="jump-btn" onclick="fbq('track', 'AddToCart');">搶先登記優惠</a>
+            <div class="timer-text">優惠倒計時 <span id="timer">14:59</span></div>
         </div>
     </div>
 
@@ -231,7 +241,7 @@ src="https://www.facebook.com/tr?id=2363729687464860&ev=PageView&noscript=1"
     </div>
 
     <div style="padding: 30px 15px; text-align: center; color: #888; font-size: 12px; background: #f4f4f4; line-height: 1.8;">
-        永信藥品國際藥廠出品 · 霸王丹台灣官方唯一通路<br>
+         霸王養精蓄力丹台灣官方唯一通路<br>
         桃市中藥廣字第1091200001號 | 衛署成製字第005101號<br>
         本產品為漢方營養補充，效果因人而異
     </div>
@@ -242,6 +252,24 @@ src="https://www.facebook.com/tr?id=2363729687464860&ev=PageView&noscript=1"
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="handleIframeLoad()"></iframe>
 
 <script>
+  // --- 倒計時邏輯 ---
+    function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        setInterval(function () {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+            display.textContent = minutes + ":" + seconds;
+            if (--timer < 0) { timer = duration; }
+        }, 1000);
+    }
+    window.onload = function () {
+        var fifteenMinutes = 60 * 15;
+        var display = document.querySelector('#timer');
+        startTimer(fifteenMinutes, display);
+    };
+
   // --- 虛假訂購信息邏輯 ---
     const names = ['王*德', '李*榮', '陳*廷', '張*豪', '林*宏', '吳*成', '蔡*志', '黃*文', '許*睿', '郭*賢'];
     const cities = ['台北市', '新北市', '桃園市', '台中市', '台南市', '高雄市', '新竹縣', '彰化縣', '屏東縣', '宜蘭縣'];
