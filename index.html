@@ -1,159 +1,100 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1497404568540227');
-fbq('init', '1517022609792658');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1497404568540227&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1517022609792658');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1517022609792658&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>霸王養精蓄力丹 | 為男人精氣神一生懸命</title>
     
     <style>
         body { font-family: "PingFang TC", "Microsoft JhengHei", sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; line-height: 1.5; }
         .container { max-width: 640px; margin: 0 auto; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
-      /* 虛假訂購信息彈窗樣式 */
         #order-news {
-            position: fixed;
-            top: 20px;
-            left: 10px;
-            z-index: 1000;
-            background: rgba(0, 0, 0, 0.8);
-            color: #fff;
-            padding: 8px 15px;
-            border-radius: 30px;
-            font-size: 13px;
-            display: none; /* 初始隱藏 */
-            align-items: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            animation: fadeInOut 5s infinite;
+            position: fixed; top: 20px; left: 10px; z-index: 1000; background: rgba(0, 0, 0, 0.8);
+            color: #fff; padding: 8px 15px; border-radius: 30px; font-size: 13px; display: none;
+            align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); animation: fadeInOut 5s infinite;
         }
-        #order-news img {
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            margin-right: 10px;
-            display: inline-block;
-        }
+        #order-news img { width: 25px; height: 25px; border-radius: 50%; margin-right: 10px; display: inline-block; }
         @keyframes fadeInOut {
             0% { opacity: 0; transform: translateY(-20px); }
             10% { opacity: 1; transform: translateY(0); }
             90% { opacity: 1; transform: translateY(0); }
             100% { opacity: 0; transform: translateY(-20px); }
         }
-
-        /* 圖片全局樣式 */
         img { width: 100%; display: block; height: auto; margin: 0; padding: 0; }
-
-        /* 標題區樣式 */
         .tw-title-box { padding: 25px 18px; background: #fff; text-align: center; border-bottom: 3px solid #8B0000; }
         .tw-title-box h1 { font-size: 24px; color: #1a1a1a; margin: 0; line-height: 1.4; font-weight: 900; }
-        /* 信任標誌樣式 */
         .badge-box { display: flex; justify-content: center; gap: 8px; margin-top: 15px; }
         .badge-item { font-size: 11px; background: #f8f8f8; color: #666; padding: 3px 8px; border-radius: 4px; border: 1px solid #eee; }
-
-        /* --- 仿圖片效果：高端電商價格區塊 --- */
         .promo-block { 
-            background: #fff; 
-            margin: 10px; 
-            padding: 15px; 
-            border-radius: 10px; 
-            border: 1px solid #eee;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            background: #fff; margin: 10px; padding: 15px; border-radius: 10px; border: 1px solid #eee;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center;
         }
         .promo-left { flex: 1; }
         .price-label { font-size: 14px; color: #666; margin-bottom: 2px; }
         .current-price { color: #d32f2f; font-size: 32px; font-weight: 900; }
         .old-price { color: #999; text-decoration: line-through; font-size: 16px; margin-left: 8px; }
-        
         .promo-right { text-align: center; padding-left: 15px; border-left: 1px solid #eee; }
         .stock-tag { font-size: 12px; color: #ff4d4d; font-weight: bold; margin-bottom: 5px; }
         .timer-text { font-size: 11px; color: #888; margin-top: 5px; }
-        
-        /* 立即下單按鈕 - 已加入跳動模式 */
         .jump-btn { 
-            display: inline-block; background: #d32f2f; color: #fff; 
-            text-decoration: none; border-radius: 5px; font-weight: bold; 
-            padding: 10px 20px; font-size: 16px; box-shadow: 0 4px 8px rgba(211,47,47,0.3);
-            animation: pulse 1.5s infinite; 
+            display: inline-block; background: #d32f2f; color: #fff; text-decoration: none; border-radius: 5px; 
+            font-weight: bold; padding: 10px 20px; font-size: 16px; box-shadow: 0 4px 8px rgba(211,47,47,0.3);
+            animation: pulse 1.5s infinite; cursor: pointer; border: none;
         }
-
-        /* 訂單表單區塊 */
         .order-area { background: #1a1a1a; color: #fff; padding: 35px 20px; border-top: 5px solid #fbc02d; }
         .order-title { text-align: center; color: #fbc02d; margin-bottom: 10px; font-size: 24px; font-weight: bold; }
-        
-        /* 信任保障圖標樣式 */
-        .trust-icons {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 25px;
-            padding: 15px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
+        .trust-icons { display: flex; justify-content: space-around; margin-bottom: 25px; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .trust-item { text-align: center; font-size: 12px; color: #fbc02d; }
         .trust-item i { display: block; font-style: normal; font-size: 24px; margin-bottom: 5px; }
-
-        /* 表單上方價格標註 */
         .order-price-info { 
-            text-align: center; background: rgba(255,255,255,0.1); 
-            padding: 10px; border-radius: 5px; margin-bottom: 25px; border: 1px dashed #fbc02d;
+            text-align: center; background: rgba(255,255,255,0.1); padding: 10px; border-radius: 5px; 
+            margin-bottom: 25px; border: 1px dashed #fbc02d;
         }
         .order-price-info span { color: #fbc02d; font-size: 20px; font-weight: bold; }
-
         .input-group { margin-bottom: 20px; }
         .input-group label { display: block; margin-bottom: 10px; color: #ddd; font-weight: bold; font-size: 16px; }
         .input-group input { width: 100%; height: 55px; border-radius: 8px; border: none; padding-left: 15px; font-size: 18px; box-sizing: border-box; }
-        
-        /* 簡化後的電話輸入框 */
         .phone-container { background: #fff; border-radius: 8px; overflow: hidden; }
         .phone-container input { width: 100%; border: none; }
-
-        /* 確認訂購按鈕 */
         .submit-btn { 
             width: 100%; height: 70px; background: linear-gradient(180deg, #ff7043, #d32f2f); color: white; border: none; 
-            border-radius: 8px; font-size: 24px; font-weight: bold; cursor: pointer;
-            animation: pulse 1.5s infinite; margin-top: 10px;
+            border-radius: 8px; font-size: 24px; font-weight: bold; cursor: pointer; animation: pulse 1.5s infinite; margin-top: 10px;
         }
-
-        /* 動畫定義 */
         @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.03); } 100% { transform: scale(1); } }
-
-        /* 懸浮立即購買按鈕 - 已加入跳動模式 */
         #floating-btn { 
             position: fixed; bottom: 20px; right: 20px; background: #d32f2f; color: white; 
             padding: 14px 28px; border-radius: 50px; text-decoration: none; font-weight: bold; 
             box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 999; font-size: 18px;
-            animation: pulse 1.5s infinite;
+            animation: pulse 1.5s infinite; cursor: pointer; border: none;
         }
     </style>
 </head>
 <body>
-  <div id="order-news">
+<div id="order-news">
     <img src="https://www.freeiconspng.com/uploads/success-icon-10.png" alt="">
     <span id="order-text"></span>
 </div>
 
 <div class="container">
     <img src="首圖.jpg" alt="產品首圖">
-
     <div class="tw-title-box">
         <h1>【找回硬實力】霸王養精蓄力丹<br><span style="font-size: 18px; color: #d32f2f;">傳承古法漢方精粹，重拾男人巔峰自信！</span></h1>
         <div class="badge-box">
@@ -166,96 +107,69 @@ src="https://www.facebook.com/tr?id=1497404568540227&ev=PageView&noscript=1"
     <div class="promo-block">
         <div class="promo-left">
             <div class="price-label">官方授權正品 (1瓶裝)</div>
-            <div>
-                <span class="current-price">1398 TWD</span>
-                <span class="old-price">2778 TWD</span>
-            </div>
+            <div><span class="current-price">1398 TWD</span><span class="old-price">2778 TWD</span></div>
             <div style="font-size: 12px; color: #d32f2f; margin-top: 5px;">⚠️ ※ 每人限購 3 瓶，名額有限</div>
         </div>
         <div class="promo-right">
             <div class="stock-tag">僅剩最後 <span id="stock-count">7</span> 組</div>
-            <a href="#order-form" class="jump-btn" onclick="fbq('track', 'AddToCart');">搶先登記優惠</a>
+            <button class="jump-btn" id="promo-btn">搶先登記優惠</button>
             <div class="timer-text">優惠倒計時 <span id="timer">14:59</span></div>
         </div>
     </div>
 
-    <img src="1.webp">
-    <img src="2.webp">
-    <img src="3.png">
-    <img src="4.jpg">
-    <img src="5.jpg">
-    <img src="6.jpg">
-    <img src="7.png">
-    <img src="16.png">
-    <img src="8.webp">
-    <img src="9.webp">
-    <img src="10.webp">
-    <img src="11.webp">
-    <img src="18.jpg">
-    <img src="12.png">
-    <img src="13.jpg">
-    <img src="14.gif">
-    <img src="17.png">
-    <img src="15.png">
+    <!-- 產品詳情圖 -->
+    <img src="1.webp"><img src="2.webp"><img src="3.png"><img src="4.jpg"><img src="5.jpg"><img src="6.jpg">
+    <img src="7.png"><img src="16.png"><img src="8.webp"><img src="9.webp"><img src="10.webp"><img src="11.webp">
+    <img src="18.jpg"><img src="12.png"><img src="13.jpg"><img src="14.gif"><img src="17.png"><img src="15.png">
 
     <div class="order-area" id="order-form">
         <div class="order-title">🎁 限時 5 折！僅限前 50 名預留</div>
-        <div style="text-align:center; color:#fbc02d; font-size:14px; margin-bottom:15px;">( 登記後客服將與您確認地址，確認後才發貨 )</div>
-
+        <div style="text-align:center; color:#fbc02d; font-size:14px; margin-bottom:15px;">( 登記後客服將與您確認地址，確認後才發货 )</div>
         <div class="trust-icons">
             <div class="trust-item"><i>🚚</i>免運費</div>
             <div class="trust-item"><i>💵</i>貨到付款</div>
             <div class="trust-item"><i>🔒</i>隱私包裝</div>
             <div class="trust-item"><i>🛡️</i>正品保證</div>
         </div>
-        
-        <div class="order-price-info">
-            當前方案：霸王養精蓄力丹1瓶裝<br>
-            結帳金額：<span>1398 TWD</span> (免運費)
-        </div>
+        <div class="order-price-info">當前方案：霸王養精蓄力丹1瓶裝<br>結帳金額：<span>1398 TWD</span> (免運費)</div>
 
-        <form id="orderForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe-sv68p-RF9rzBHcrAAPkjUJXxqdOEms7LxG-7kFTvvBoOQg/formResponse" method="POST" target="hidden_iframe">
-            
+        <form id="orderForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfhm9nKW8mo5CM7LSnN3q5DRmumYiELFspQ_-8nbXYeU4aZkw/formResponse" method="POST" target="hidden_iframe">
             <div class="input-group">
                 <label>收貨人姓名：</label>
-                <input type="text" id="custName" name="entry.258352919" placeholder="請填寫您的真實姓名" required>
+                <input type="text" id="custName" name="entry.516211201" placeholder="請填寫您的真實姓名" required>
             </div>
-
             <div class="input-group">
                 <label>聯繫電話：</label>
                 <div class="phone-container">
                     <input type="tel" id="userPhone" placeholder="請輸入手機號碼（例：0912345678）" pattern="[0-9]*" required oninput="this.value=this.value.replace(/[^0-9]/g,'')">
                 </div>
-                <input type="hidden" id="fullPhone" name="entry.704955727">
-                <input type="hidden" id="userIP" name="entry.770254355">
+                <input type="hidden" id="fullPhone" name="entry.1762877689">
+                <input type="hidden" id="userIP" name="entry.1005513444">
             </div>
-
             <div style="margin-bottom: 25px; font-size: 14px; color: #bbb; text-align: center; line-height: 1.6;">
-                🔒 隱私保護：包裹面單不顯示產品名稱<br>
-                ✅ 提交後客服將與您致電核對地址，請留意電話
+                🔒 隱私保護：包裹面單不顯示產品名稱<br>✅ 提交後客服將與您致電核對地址，請留意電話
             </div>
-
             <button type="submit" class="submit-btn" id="submitBtn">搶先預留優惠名額</button>
-
-            <div style="margin-top: 15px; padding: 10px; border: 1px solid #444; border-radius: 5px; font-size: 13px; color: #888; text-align: center;">
-                ℹ️ 溫馨提示：登記後不代表立即扣款。專業老師將先致電為您說明調理方案，若電話未接通將自動取消優惠名額。
-            </div>
         </form>
     </div>
-
     <div style="padding: 30px 15px; text-align: center; color: #888; font-size: 12px; background: #f4f4f4; line-height: 1.8;">
-         霸王養精蓄力丹台灣官方唯一通路<br>
-        桃市中藥廣字第1091200001號 | 衛署成製字第005101號<br>
-        本產品為漢方營養補充，效果因人而異
+         霸王養精蓄力丹台灣官方唯一通路<br>桃市中藥廣字第1091200001號 | 衛署成製字第005101號<br>本產品為漢方營養補充，效果因人而異
     </div>
 </div>
 
-<a href="#order-form" id="floating-btn" onclick="fbq('track', 'AddToCart');">領取 5 折名額</a>
-
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="handleIframeLoad()"></iframe>
+<button id="floating-btn">領取 5 折名額</button>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
 <script>
-  // --- 倒計時邏輯 ---
+    // --- FB 像素回传核心逻辑 ---
+    function trackFB(eventName, params = {}) {
+        console.log('FB Tracking:', eventName, params);
+        if (typeof fbq === 'function') {
+            fbq('track', eventName, params);
+        }
+    }
+
+    // 倒計時
     function startTimer(duration, display) {
         var timer = duration, minutes, seconds;
         setInterval(function () {
@@ -267,64 +181,69 @@ src="https://www.facebook.com/tr?id=1497404568540227&ev=PageView&noscript=1"
             if (--timer < 0) { timer = duration; }
         }, 1000);
     }
-    window.onload = function () {
-        var fifteenMinutes = 60 * 15;
-        var display = document.querySelector('#timer');
-        startTimer(fifteenMinutes, display);
-    };
 
-  // --- 虛假訂購信息邏輯 ---
+    // 虛假訂購
     const names = ['王*德', '李*榮', '陳*廷', '張*豪', '林*宏', '吳*成', '蔡*志', '黃*文', '許*睿', '郭*賢'];
     const cities = ['台北市', '新北市', '桃園市', '台中市', '台南市', '高雄市', '新竹縣', '彰化縣', '屏東縣', '宜蘭縣'];
-    const products = ['1瓶裝', '2瓶裝', '3瓶裝'];
-
     function showOrderNews() {
         const orderNews = document.getElementById('order-news');
         const orderText = document.getElementById('order-text');
-        
-        // 隨機生成信息
+        if(!orderNews || !orderText) return;
         const name = names[Math.floor(Math.random() * names.length)];
         const city = cities[Math.floor(Math.random() * cities.length)];
-        const product = products[Math.floor(Math.random() * products.length)];
-        const time = Math.floor(Math.random() * 10) + 1; // 1-10分鐘前
-
+        const product = ['1瓶裝', '2瓶裝', '3瓶裝'][Math.floor(Math.random() * 3)];
+        const time = Math.floor(Math.random() * 10) + 1;
         orderText.innerText = `${time}分鐘前，${city}的${name}已訂購 ${product}`;
-        
-        // 顯示
         orderNews.style.display = 'flex';
-        
-        // 5秒後隱藏，然後等待10秒再顯示下一個
-        setTimeout(() => {
-            orderNews.style.display = 'none';
-        }, 5000);
+        setTimeout(() => { orderNews.style.display = 'none'; }, 5000);
     }
 
-    // 每15秒運行一次循環
-    setInterval(showOrderNews, 15000);
-    // 頁面加載完成3秒後顯示第一個
-    setTimeout(showOrderNews, 3000);
-    // 獲取用戶 IP
-    fetch('https://api.ipify.org?format=json').then(res => res.json()).then(data => { document.getElementById('userIP').value = data.ip; });
+    window.onload = function () {
+        startTimer(60 * 15, document.querySelector('#timer'));
+        setInterval(showOrderNews, 15000);
+        setTimeout(showOrderNews, 3000);
+        fetch('https://api.ipify.org?format=json').then(res => res.json()).then(data => { 
+            const ip = document.getElementById('userIP'); if(ip) ip.value = data.ip; 
+        });
+    };
 
-    var isSubmitting = false;
-    window.handleIframeLoad = function() {
+    // 按鈕監聽：点击“抢先登记”触发 AddToCart
+    const btnHandler = (e) => {
+        trackFB('AddToCart');
+        document.getElementById('order-form').scrollIntoView({ behavior: 'smooth' });
+    };
+    document.getElementById('promo-btn').addEventListener('click', btnHandler);
+    document.getElementById('floating-btn').addEventListener('click', btnHandler);
+
+    // 表單提交逻辑
+    let isSubmitting = false;
+    
+    // 监听 iframe 加载，用于触发 Purchase
+    document.getElementById('hidden_iframe').onload = function() {
         if (isSubmitting) {
-            fbq('track', 'Purchase', {value: 1398, currency: 'TWD'});
+            trackFB('Purchase', {value: 1398, currency: 'TWD'});
             alert('名額預留成功！客服專員稍後將與您電話聯繫說明方案並確認地址，請保持手機暢通！');
             isSubmitting = false; 
-            location.reload();
+            setTimeout(function(){
+                location.reload();
+            }, 500);
         }
     };
 
     document.getElementById('orderForm').addEventListener('submit', function(e) {
-        // 直接取輸入框的值
-        const phoneInput = document.getElementById('userPhone').value;
-        document.getElementById('fullPhone').value = phoneInput.trim();
+        // 1. 再次确保 AddToCart 触发
+        trackFB('AddToCart');
+        
+        // 2. 准备表单数据
+        document.getElementById('fullPhone').value = document.getElementById('userPhone').value.trim();
         isSubmitting = true;
+        
+        // 3. UI 状态更新
         document.getElementById('submitBtn').innerText = "登記處理中...";
         document.getElementById('submitBtn').disabled = true;
+        
+        // 注意：这里不需要 e.preventDefault()，因为我们需要表单正常提交到 target="hidden_iframe"
     });
 </script>
-
 </body>
 </html>
